@@ -43,6 +43,9 @@ TASK2:ANALYZING WEBSITE PERFORMANCE
     5.Testing conversion paths
 TASK3:ANALYSIS FOR CHENNEL PORTFOLIO MANAGEMENT
 
+
+![portfolio_optimization](https://github.com/niladri-dey/SQL-FOR-ANALYTICS-BUSINESS-INTELLIGENCE/assets/63118910/c73e7de5-1117-49ef-8f5d-390272dab9a6)
+
     1.Analyzing channel portfolios
     2.Comparing channel characteristics
     3.Cross-Channel bid Optimization
