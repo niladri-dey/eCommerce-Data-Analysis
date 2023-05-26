@@ -74,15 +74,15 @@ GROUP BY
     COUNT(
 			DISTINCT 
 				CASE WHEN utm_source='gsearch' AND device_type='desktop'
-					THEN website_session_id
-                    ELSE null
+				     THEN website_session_id
+                                     ELSE null
 				END
 		) AS gsearch_pc_session,
 	COUNT(
 			DISTINCT 
 				CASE WHEN utm_source='bsearch' AND device_type='desktop'
-					THEN website_session_id
-                    ELSE null
+				     THEN website_session_id
+                                     ELSE null
 				END
 		) AS bsearch_pc_session,
 
@@ -90,30 +90,30 @@ GROUP BY
     COUNT(
 			DISTINCT 
 				CASE WHEN utm_source='bsearch' AND device_type='desktop'
-					THEN website_session_id
-                    ELSE null
+				     THEN website_session_id
+                                     ELSE null
 				END
 		)/
 	    COUNT(
 			DISTINCT 
 				CASE WHEN utm_source='gsearch' AND device_type='desktop'
-					THEN website_session_id
-                    ELSE null
+				     THEN website_session_id
+                                     ELSE null
 				END
 		) AS bsearch_percentage_gsearch_pc,
         
     COUNT(
 			DISTINCT 
 				CASE WHEN utm_source='gsearch' AND device_type='mobile'
-					THEN website_session_id
-                    ELSE null
+				     THEN website_session_id
+                                      ELSE null
 				END
 		) AS gsearch_mobile_session,
     COUNT(
 			DISTINCT 
 				CASE WHEN utm_source='bsearch' AND device_type='mobile'
-					THEN website_session_id
-                    ELSE null
+				     THEN website_session_id
+                                      ELSE null
 				END
 		) AS bsearch_mobile_session,
 
@@ -121,15 +121,15 @@ GROUP BY
 COUNT(
 			DISTINCT 
 				CASE WHEN utm_source='bsearch' AND device_type='mobile'
-					THEN website_session_id
-                    ELSE null
+				     THEN website_session_id
+                                      ELSE null
 				END
 		)/
 COUNT(
 			DISTINCT 
 				CASE WHEN utm_source='gsearch' AND device_type='mobile'
-					THEN website_session_id
-                    ELSE null
+				     THEN website_session_id
+                                     ELSE null
 				END
 		) AS bsearch_percentge_gsearch_mob
 
