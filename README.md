@@ -24,11 +24,17 @@ which contain eCommerce data about:
 ## MAJOR PROJECT ASSIGNMENTS
 TASK1:TRAFFIC SOURCE ANALYSIS
 
+
+![traffic_source](https://github.com/niladri-dey/SQL-FOR-ANALYTICS-BUSINESS-INTELLIGENCE/assets/63118910/f26ffc90-4532-487b-a3ba-357490e18671)
+
     1.Finding top traffic sources
     2.Traffic sources conversion rates
     3.Bid optimization and trend analysis
     4.Monitor searching activiy on device level
 TASK2:ANALYZING WEBSITE PERFORMANCE
+
+
+![bid_optimization](https://github.com/niladri-dey/SQL-FOR-ANALYTICS-BUSINESS-INTELLIGENCE/assets/63118910/b106940a-3cdf-4691-a15b-f5fbbcd9f370)
 
     1.Analyzing top website pages and entry pages
     2.Analyzing bounce rates and landing page test
