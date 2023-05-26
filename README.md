@@ -10,6 +10,7 @@ STEP 1: In MySQL Workbench, click File from the top menu, then select Run SQL Sc
 STEP 2: Navigate to the create_mavenfuzzyfactory.sql,This code will automatically generate the entire database that we’ll be exploring throughout the course, modeling a
 real-world eCommerce product company
 ## OVERVIEW OF THE MAVEN FUZZY FACTORY DATABASE
+![maven_data_overview](https://github.com/niladri-dey/SQL-FOR-ANALYTICS-BUSINESS-INTELLIGENCE/assets/63118910/ace13cea-ca6e-4ec6-a6e1-510d9e04361e)
 
 We will be working with six related tables,
 which contain eCommerce data about:
