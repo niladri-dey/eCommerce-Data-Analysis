@@ -9,7 +9,7 @@ SELECT
 	website_sessions.utm_content,
 	COUNT(DISTINCT website_sessions.website_session_id) AS Sessions,
 	COUNT(DISTINCT orders.order_id) AS Orders,
-    ROUND(COUNT(DISTINCT orders.order_id)/COUNT(DISTINCT website_sessions.website_session_id),3) AS CVR
+    	ROUND(COUNT(DISTINCT orders.order_id)/COUNT(DISTINCT website_sessions.website_session_id),3) AS CVR
 FROM website_sessions
 	LEFT JOIN orders
 		ON website_sessions.website_session_id=orders.website_session_id
