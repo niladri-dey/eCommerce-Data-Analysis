@@ -88,7 +88,7 @@ FROM website_sessions
 		ON website_sessions.website_session_id=orders.website_session_id
 WHERE website_sessions.created_at<'2012-05-11'
 	AND website_sessions.utm_source='gsearch'
-    AND website_sessions.utm_campaign='nonbrand'
+    	AND website_sessions.utm_campaign='nonbrand'
 GROUP BY 
 	device_type
 ;
@@ -114,7 +114,7 @@ FROM website_sessions
 WHERE created_at>'2012-04-15'
 	AND created_at<'2012-06-09'
 	AND utm_source='gsearch'
-    AND utm_campaign='nonbrand'
+    	AND utm_campaign='nonbrand'
 GROUP BY 
 	YEAR(created_at),
     WEEK(created_at)
