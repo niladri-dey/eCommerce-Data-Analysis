@@ -2,7 +2,7 @@ USE mavenfuzzyfactory;
 
 SELECT
 	pageview_url,
-    COUNT(DISTINCT website_pageview_id) AS page_views
+    	COUNT(DISTINCT website_pageview_id) AS page_views
 FROM website_pageviews
 WHERE website_pageview_id<1000
 GROUP BY pageview_url
@@ -15,7 +15,7 @@ ORDER BY page_views DESC ;
 
 SELECT 
 	pageview_url,
-    COUNT(DISTINCT website_pageview_id) AS pageviews
+    	COUNT(DISTINCT website_pageview_id) AS pageviews
 FROM website_pageviews
 WHERE created_at<'2012-06-09'
 GROUP BY pageview_url
@@ -35,7 +35,7 @@ ORDER BY pageviews DESC;
 CREATE TEMPORARY TABLE first_pageview_per_session
 SELECT 
 	website_session_id,
-    MIN(website_pageview_id) AS Min_pageviews
+    	MIN(website_pageview_id) AS Min_pageviews
 FROM website_pageviews
 WHERE created_at<'2012-06-12'
 GROUP BY website_session_id;
@@ -59,7 +59,7 @@ GROUP BY website_pageviews.pageview_url;
 CREATE TEMPORARY TABLE sec_pageview
 SELECT 
 	website_session_id,
-    MIN(website_pageview_id) AS Min_pageviews
+    	MIN(website_pageview_id) AS Min_pageviews
 FROM website_pageviews
 WHERE created_at<'2012-06-14'
 GROUP BY website_session_id;
@@ -69,7 +69,7 @@ GROUP BY website_session_id;
 CREATE TEMPORARY TABLE sessions_w_home_landingpage
 SELECT 
 	sec_pageview.website_session_id,
-    website_pageviews.pageview_url AS landing_page
+    	website_pageviews.pageview_url AS landing_page
 FROM sec_pageview
 	LEFT JOIN website_pageviews
 		ON website_pageviews.website_pageview_id = sec_pageview.Min_pageviews
@@ -81,8 +81,8 @@ FROM sec_pageview
 CREATE TEMPORARY TABLE bounced_sessions
 SELECT 
 	sessions_w_home_landingpage.website_session_id,
-    sessions_w_home_landingpage.landing_page,
-    COUNT(website_pageviews.website_pageview_id) AS count_of_pages_viewed
+    	sessions_w_home_landingpage.landing_page,
+    	COUNT(website_pageviews.website_pageview_id) AS count_of_pages_viewed
 FROM sessions_w_home_landingpage
 	LEFT JOIN website_pageviews
 		ON website_pageviews.website_session_id = sessions_w_home_landingpage.website_session_id
