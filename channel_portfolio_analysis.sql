@@ -6,13 +6,13 @@ USE mavenfuzzyfactory;
    
 SELECT
 	MIN(DATE(created_at)) AS week_started_at,
-    COUNT(DISTINCT website_sessions.website_session_id) AS sessions,
-    COUNT(DISTINCT CASE WHEN utm_source='gsearch' THEN website_session_id ELSE NULL END) AS gsearch_sessions,
-    COUNT(DISTINCT CASE WHEN utm_source='bsearch' THEN website_session_id ELSE NULL END) AS bsearch_sessions
+    	COUNT(DISTINCT website_sessions.website_session_id) AS sessions,
+    	COUNT(DISTINCT CASE WHEN utm_source='gsearch' THEN website_session_id ELSE NULL END) AS gsearch_sessions,
+    	COUNT(DISTINCT CASE WHEN utm_source='bsearch' THEN website_session_id ELSE NULL END) AS bsearch_sessions
 FROM website_sessions
 WHERE created_at > '2012-08-22'
 	AND created_at < '2012-11-29'
-    AND utm_campaign = 'nonbrand' -- limiting to nonbrand paid search
+    	AND utm_campaign = 'nonbrand' -- limiting to nonbrand paid search
 GROUP BY YEARWEEK(created_at);
 
 -- ASSIGNMENT2:COMPARING MARKETING CHANNELS
@@ -20,14 +20,14 @@ GROUP BY YEARWEEK(created_at);
  SELECT
 	utm_source,
 	COUNT(DISTINCT website_sessions.website_session_id) AS sessions,
-    COUNT(DISTINCT 
+    	COUNT(DISTINCT 
 			CASE WHEN device_type = 'mobile' 
 				THEN website_sessions.website_session_id ELSE NULL END
-		 ) AS mobile_session,
+	     ) AS mobile_session,
 	COUNT(DISTINCT 
 			CASE WHEN device_type = 'mobile' 
 				THEN website_sessions.website_session_id ELSE NULL END
-		 )/COUNT(DISTINCT website_sessions.website_session_id)
+	     )/COUNT(DISTINCT website_sessions.website_session_id)
          AS percentage_mobile
 	
 
