@@ -50,4 +50,4 @@ TASK3:ANALYSIS FOR CHENNEL PORTFOLIO MANAGEMENT
     2.Comparing channel characteristics
     3.Cross-Channel bid Optimization
     4.Analyzing channel portfolio trends
-    5.Analyzing direct and brand drien traffic
+    5.Analyzing direct and brand driven traffic
